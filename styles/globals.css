@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Aeonik-Light";
+  src: url("../fonts/Aeonik-Light.woff") format("woff");
+}
+/* @font-face {
+  font-family: "Aeonik-Bold";
+  src: url("../fonts/Aeonik-Bold.woff") format("woff");
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #0e0e0e;
+  scroll-behavior: smooth;
+}
+
+h1,
+h3 {
+  font-family: BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
