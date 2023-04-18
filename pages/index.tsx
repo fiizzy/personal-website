@@ -5,6 +5,7 @@ import { ProfessionalExperience } from "../component/professional_experience/Pro
 import { Bordercard } from "../component/border_card/BoderCard";
 import { Technologies } from "../component/technologies_card/Technologies";
 import { LangAndFrameWork } from "../component/technologies_card/LangAndFrameWorks";
+import { Tools } from "../component/technologies_card/Tools";
 
 const Home: any = () => {
   return (
@@ -13,7 +14,15 @@ const Home: any = () => {
         <Navbar />
         <Intro />
         <ProfessionalExperience />
-        <Technologies title="Lang and Frame" group={LangAndFrameWork.group} />
+        <div className="mt-20">
+          <Technologies
+            title="Languages and Frameworks"
+            group={LangAndFrameWork.group}
+          />
+        </div>
+        <div className="mt-10">
+          <Technologies title="Tools" group={Tools.group} />
+        </div>
       </BoxPadding>
     </>
   );

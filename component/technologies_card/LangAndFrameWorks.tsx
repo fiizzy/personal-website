@@ -1,28 +1,52 @@
 export const LangAndFrameWork = {
   group: [
     {
-      type: "active",
+      type: "actively using",
       data: [
         {
-          name: "React",
-          image: "RI",
+          name: "Dart",
+          image: "/dart.svg",
+          url: "https://flutter.dev",
         },
         {
           name: "Flutter",
-          image: "FI",
+          image: "/flutter.svg",
+          url: "https://dart.dev",
         },
       ],
     },
     {
-      type: "Inactive",
+      type: "passively using",
       data: [
         {
           name: "React",
-          image: "RI",
+          image: "/react.svg",
+          url: "https://www.typescriptlang.org/",
         },
         {
-          name: "Flutter",
-          image: "FI",
+          name: "Node",
+          image: "/nodejs.svg",
+          url: "https://www.typescriptlang.org/",
+        },
+        {
+          name: "Javascript",
+          image: "/js.svg",
+          url: "https://www.typescriptlang.org/",
+        },
+        {
+          name: "TypeScript",
+          image: "/ts.svg",
+          url: "https://www.typescriptlang.org/",
+        },
+        {
+          name: "NextJs",
+          image: "/nextjs.svg",
+          url: "https://www.typescriptlang.org/",
+        },
+        {
+          name: "Go",
+          image: "/golang.svg",
+          url: "https://www.typescriptlang.org/",
         },
       ],
     },

@@ -6,19 +6,16 @@ export const Technologies = ({ title, group }: any) => {
   return (
     <Bordercard>
       <div>
-        <div>{title}</div>
+        <div className="text-8 opacity-60 font-bold underline">{title}</div>
         {group.map((e: any, i: any) => (
           <div key={i}>
-            <div>{e.type}</div>
-            <div className="flex">
+            <div className="mt-10 mb-2 uppercase tracking-widest opacity-70">
+              {e.type}
+            </div>
+            <div className="flex space-x-2">
               {e.data.map((e: any, i: any) => (
                 <div key={i}>
-                  <div className="grey-200 bg-grey-100 p-2 rounded-[10px] border border-grey-200">
-                    <div className="flex items-center space-x-2">
-                      <Image src={github} height={40} />
-                      <div>{e.name}</div>
-                    </div>
-                  </div>
+                  <Tags e={e} />
                 </div>
               ))}
             </div>
@@ -26,5 +23,18 @@ export const Technologies = ({ title, group }: any) => {
         ))}
       </div>
     </Bordercard>
+  );
+};
+
+const Tags = ({ e }: any) => {
+  return (
+    <a target="_blank" href="https://github.com/fiizzy">
+      <div className="grey-200 bg-grey-100 p-2 rounded-[10px] border border-grey-200 cursor-pointer hover:opacity-50">
+        <div className="flex items-center space-x-2">
+          <Image src={e.image} height={20} width={20} />
+          <div>{e.name}</div>
+        </div>
+      </div>
+    </a>
   );
 };
