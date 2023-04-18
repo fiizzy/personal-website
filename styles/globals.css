@@ -3,20 +3,30 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Aeonik-Light";
+  font-family: "Aeonik";
+  font-weight: 200;
   src: url("../fonts/Aeonik-Light.woff") format("woff");
 }
-/* @font-face {
-  font-family: "Aeonik-Bold";
+@font-face {
+  font-family: "Aeonik";
+  font-weight: 500;
+  src: url("../fonts/Aeonik-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Aeonik";
+  font-weight: 800;
   src: url("../fonts/Aeonik-Bold.woff") format("woff");
-} */
+}
 
 html,
+* {
+  font-family: "Aeonik-Light";
+}
 body {
   padding: 0;
   margin: 0;
   color: white;
-  font-family: BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+  font-family: , BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #0d0d0d;
   scroll-behavior: smooth;

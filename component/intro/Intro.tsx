@@ -13,7 +13,7 @@ export const Intro = () => {
         <Image src={profilePicture} width={200} height={200} />
 
         <div>
-          <div className="text-13 font-bold gradient-text">Hi, I am Fisayo</div>
+          <div className="text-12 font-bold gradient-text">Hi, I am Fisayo</div>
           <div className="text-8 font-light">
             I am software Engineer with a diverse background in design.
           </div>
