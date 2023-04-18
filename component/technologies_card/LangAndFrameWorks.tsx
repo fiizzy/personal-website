@@ -6,12 +6,12 @@ export const LangAndFrameWork = {
         {
           name: "Dart",
           image: "/dart.svg",
-          url: "https://flutter.dev",
+          url: "https://dart.dev",
         },
         {
           name: "Flutter",
           image: "/flutter.svg",
-          url: "https://dart.dev",
+          url: "https://flutter.dev",
         },
       ],
     },
@@ -21,17 +21,17 @@ export const LangAndFrameWork = {
         {
           name: "React",
           image: "/react.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.react.dev/",
         },
         {
           name: "Node",
           image: "/nodejs.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.nodejs.org/",
         },
         {
           name: "Javascript",
           image: "/js.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.javascript.com/",
         },
         {
           name: "TypeScript",
@@ -41,12 +41,12 @@ export const LangAndFrameWork = {
         {
           name: "NextJs",
           image: "/nextjs.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://nextjs.org/",
         },
         {
           name: "Go",
           image: "/golang.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://go.dev/",
         },
       ],
     },

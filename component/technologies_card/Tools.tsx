@@ -6,12 +6,12 @@ export const Tools = {
         {
           name: "Firebase",
           image: "/firebase.svg",
-          url: "https://firebase.com",
+          url: "https://firebase.google.com",
         },
         {
           name: "Supabase",
           image: "/supabase.svg",
-          url: "https://dart.dev",
+          url: "https://supabase.com",
         },
       ],
     },
@@ -21,17 +21,17 @@ export const Tools = {
         {
           name: "CodeMagic",
           image: "/code-magic.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.codemagic.io/",
         },
         {
           name: "GitHub Actions",
           image: "/githubactions.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://github.com/features/actions",
         },
         {
           name: "Vercel Workflow",
           image: "/vercel.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://vercel.com/workflow",
         },
       ],
     },
@@ -46,22 +46,22 @@ export const Tools = {
         {
           name: "Jira",
           image: "/Jira.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://jira.atlassian.com/",
         },
         {
           name: "Slack",
           image: "/slack.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.slack.com/",
         },
         {
           name: "Amplitude Analytics",
           image: "/amplitude.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.amplitude.com/",
         },
         {
           name: "Firebase Analytics",
           image: "/google-analytics.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://firebase.flutter.dev/docs/analytics/overview/",
         },
       ],
     },
@@ -76,7 +76,7 @@ export const Tools = {
         {
           name: "Sketch",
           image: "/sketch.svg",
-          url: "https://www.typescriptlang.org/",
+          url: "https://www.sketch.com/",
         },
       ],
     },
