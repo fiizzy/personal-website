@@ -31,30 +31,31 @@ module.exports = {
         13: "2.887rem",
         14: "3.247rem",
       },
-    },
-  },
-
-  colors: {
-    white: colors.white,
-    black: colors.black,
-    gradientPurple: {
-      1: "#7C3EFF",
-      2: "#E3B5FF",
-    },
-    blue: {
-      200: "#699BFF",
-      500: "#0041C1",
-    },
-    grey: {
-      900: "#0E0E0E",
-      700: "#434343",
-    },
-    accent: {
-      green: "#00A607",
-      pink: "#8A00AD",
-      dirtyGold: "#603F00",
-      burntPink: "#49004F",
-      300: "#24FF00",
+      colors: {
+        white: colors.white,
+        black: colors.black,
+        gradientPurple: {
+          1: "#7C3EFF",
+          2: "#E3B5FF",
+        },
+        blue: {
+          200: "#699BFF",
+          500: "#0041C1",
+        },
+        grey: {
+          100: "#111111",
+          200: "#414141",
+          900: "#0E0E0E",
+          700: "#434343",
+        },
+        accent: {
+          green: "#00A607",
+          pink: "#8A00AD",
+          dirtyGold: "#603F00",
+          burntPink: "#49004F",
+          300: "#24FF00",
+        },
+      },
     },
   },
 
