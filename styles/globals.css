@@ -35,3 +35,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.gradient-text {
+  background: linear-gradient(to right, #7c3eff, #e3b5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
