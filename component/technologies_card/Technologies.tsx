@@ -12,7 +12,7 @@ export const Technologies = ({ title, group }: any) => {
             <div className="mt-10 mb-2 uppercase tracking-widest opacity-70">
               {e.type}
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-2  flex-wrap">
               {e.data.map((e: any, i: any) => (
                 <div key={i}>
                   <Tags e={e} />
