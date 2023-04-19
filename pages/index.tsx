@@ -9,10 +9,12 @@ import { Tools } from "../component/technologies_card/Tools";
 import { Projects } from "../component/projects/Projects";
 import { Office } from "../component/office/Office";
 import { Books } from "../component/books/Books";
+import { NextHead } from "../component/Head/NextHead";
 
 const Home: any = () => {
   return (
     <>
+      <NextHead pageTitle="Fisayo Obilaja" />
       <Navbar />
       <BoxPadding>
         <Intro />

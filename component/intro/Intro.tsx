@@ -56,7 +56,7 @@ export const Intro = () => {
                   rel="noreferrer"
                   className="flex items-center space-x-2 opacity-50 hover:opacity-100"
                 >
-                  <div>Download Resume</div>
+                  <div className="underline"> Resume</div>
                 </a>
               </Link>
             </div>
