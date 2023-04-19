@@ -1,8 +1,12 @@
 export const projectData = [
   {
     name: "MyBubble",
-    description: "MyBubble is a mental health App",
-    image: "/mybubble.png",
+    description:
+      "An app that allows creators and influencers stream their live  podcasts, events, spaces and shows",
+    image: "../../mybbuble.png",
+    isFlagship: true,
+    github: "https://github.com/fiizzy",
+    ios: "fdf",
   },
   {
     name: "Feature Notifier",

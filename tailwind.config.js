@@ -6,13 +6,10 @@ module.exports = {
 
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Open Sans", "sans-serif"],
-      },
       fontWeight: {
         light: 200,
         regular: 500,
-        regular: 800,
+        bold: 800,
       },
       //Using the Major-Second type scale - ref : https://typescale.com
       fontSize: {
@@ -36,7 +33,11 @@ module.exports = {
         black: colors.black,
         gradientPurple: {
           1: "#7C3EFF",
-          2: "#E3B5FF",
+          2: "#A000AE",
+        },
+        darkGradient: {
+          1: "#250028",
+          2: "#1B0036",
         },
         blue: {
           200: "#699BFF",

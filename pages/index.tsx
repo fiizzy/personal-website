@@ -24,8 +24,10 @@ const Home: any = () => {
         <div className="mt-10">
           <Technologies title="Tools" group={Tools.group} />
         </div>
-        <div>
-          <p>Projects</p>
+        <div className="my-20">
+          <p className="mb-10 tracking-widest text-8 opacity-70 font-light uppercase">
+            Projects
+          </p>
           <Projects />
         </div>
       </BoxPadding>
