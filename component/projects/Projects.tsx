@@ -14,59 +14,61 @@ export const Projects = () => {
       {projectData.map((e: any, i: number) => (
         <motion.div
           initial={{ y: +100, opacity: 0 }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.3 }}
           whileInView={{ opacity: 1, y: 0 }}
-          //viewport={{ once: true }}
+          // viewport={{ once: true }}
         >
           <div
-            className={`grey-200 bg-grey-100 p-10 rounded-[10px] border border-grey-200 flex justify-between flex-wrap items-center ${
+            className={`my-8 grey-200 bg-grey-100 p-10 rounded-[10px] border border-grey-200  ${
               e.isFlagship
                 ? "bg-gradient-to-r from-gradientPurple-1 to-gradientPurple-2"
                 : "bg-gradient-to-r from-darkGradient-1 to-darkGradient-2"
             } `}
           >
-            <div>
-              <div className="w-[200px]">
-                <img
-                  src={e.image}
-                  alt={e.name}
-                  // layout="fill"
-                  // objectFit="contain"
-                />
+            <div className="flex space-x-20 md:flex-nowrap items-center">
+              <div>
+                <div className="w-[200px]">
+                  <img
+                    src={e.image}
+                    alt={e.name}
+                    // layout="fill"
+                    // objectFit="contain"
+                  />
+                </div>
               </div>
-            </div>
-            <div>
-              <div className="text-8 font-bold">{e.name}</div>
-              <div className="text-5 my-8">{e.description}</div>
-              <div className="flex space-x-4">
-                {e.github ? <Button link={e.github} title="Github" /> : <></>}
-                {e.ios ? (
-                  <a
-                    className="w-48 hover:opacity-50 "
-                    href={e.ios}
-                    target="_blank"
-                  >
-                    <Image src={appstore} />
-                  </a>
-                ) : (
-                  <></>
-                )}
-                {e.android ? (
-                  <a
-                    className="w-48 hover:opacity-50 "
-                    href={e.android}
-                    target="_blank"
-                  >
-                    <Image src={playstore} />
-                  </a>
-                ) : (
-                  <></>
-                )}
-                {e.readMore ? (
-                  <Button link={e.readMore} title="Read More" />
-                ) : (
-                  <></>
-                )}
+              <div>
+                <div className="text-8 font-bold">{e.name}</div>
+                <div className="text-5 my-8">{e.description}</div>
+                <div className="flex space-x-4">
+                  {e.github ? <Button link={e.github} title="Github" /> : <></>}
+                  {e.ios ? (
+                    <a
+                      className="w-48 hover:opacity-50 "
+                      href={e.ios}
+                      target="_blank"
+                    >
+                      <Image src={appstore} />
+                    </a>
+                  ) : (
+                    <></>
+                  )}
+                  {e.android ? (
+                    <a
+                      className="w-48 hover:opacity-50 "
+                      href={e.android}
+                      target="_blank"
+                    >
+                      <Image src={playstore} />
+                    </a>
+                  ) : (
+                    <></>
+                  )}
+                  {e.readMore ? (
+                    <Button link={e.readMore} title="Read More" />
+                  ) : (
+                    <></>
+                  )}
+                </div>
               </div>
             </div>
             {e.isFlagship ? (
