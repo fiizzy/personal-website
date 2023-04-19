@@ -46,7 +46,7 @@ export const Navbar = (props: any) => {
               rel="noreferrer"
               className="flex items-center space-x-2"
             >
-              <div>Download Resume</div>
+              <div className="underline"> Resume</div>
             </a>
           </Link>
         </div>

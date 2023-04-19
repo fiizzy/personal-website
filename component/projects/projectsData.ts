@@ -5,9 +5,10 @@ export const projectData = [
       "An app that allows creators and influencers stream their live  podcasts, events, spaces and shows",
     image: "../../mybbuble.png",
     isFlagship: true,
-    github: "https://github.com/fiizzy",
-    ios: "fdf",
-    android: "sd",
+    // github: "https://github.com/fiizzy",
+    ios: "https://apps.apple.com/gb/app/mybubble-mood-tracker-journal/id1591195254",
+    android:
+      "https://play.google.com/store/apps/details?id=com.mybubbleapp.mybubble",
   },
   {
     name: "Feature Notifier",

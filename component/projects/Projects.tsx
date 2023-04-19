@@ -25,7 +25,7 @@ export const Projects = () => {
                 : "bg-gradient-to-r from-darkGradient-1 to-darkGradient-2"
             } `}
           >
-            <div className="flex space-x-20 md:flex-nowrap items-center">
+            <div className="flex md:space-x-20 flex-wrap md:flex-nowrap items-center">
               <div>
                 <div className="w-[200px]">
                   <img
@@ -37,9 +37,9 @@ export const Projects = () => {
                 </div>
               </div>
               <div>
-                <div className="text-8 font-bold">{e.name}</div>
-                <div className="text-5 my-8">{e.description}</div>
-                <div className="flex space-x-4">
+                <div className="text-8 font-bold mt-4 md:mt-0">{e.name}</div>
+                <div className="text-5 my-4">{e.description}</div>
+                <div className="md:flex mb-4 md:mb-0 md:space-x-4 flex-wrap text-center  max-w-[200px] md:max-w-full">
                   {e.github ? <Button link={e.github} title="Github" /> : <></>}
                   {e.ios ? (
                     <a

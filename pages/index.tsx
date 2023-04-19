@@ -7,12 +7,14 @@ import { Technologies } from "../component/technologies_card/Technologies";
 import { LangAndFrameWork } from "../component/technologies_card/LangAndFrameWorks";
 import { Tools } from "../component/technologies_card/Tools";
 import { Projects } from "../component/projects/Projects";
+import { Office } from "../component/office/Office";
+import { Books } from "../component/books/Books";
 
 const Home: any = () => {
   return (
     <>
+      <Navbar />
       <BoxPadding>
-        <Navbar />
         <Intro />
         <ProfessionalExperience />
         <div className="mt-20">
@@ -30,7 +32,10 @@ const Home: any = () => {
           </p>
           <Projects />
         </div>
+        <Office />
+        <Books />
       </BoxPadding>
+      <Navbar />
     </>
   );
 };
