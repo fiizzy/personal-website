@@ -4,7 +4,7 @@ import { INextHead } from "./INextHead";
 export const NextHead = (props: INextHead) => {
   return (
     <Head>
-      <title>{`MyBubble - ${props.pageTitle} | Software Engineer`}</title>
+      <title>{`${props.pageTitle} | Software Engineer`}</title>
       <meta
         name="description"
         content="Fisayo is a Software Engineer that just can't get over the beauty of building products..."

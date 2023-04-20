@@ -23,15 +23,16 @@ export const Intro = () => {
             <div className="text-12 font-bold gradient-text">
               Hi, I am Fisayo
             </div>
-            <div className="text-8 font-light">
-              I am software Engineer with a diverse background in design.
+            <div className="text-6 md:text-8 font-light">
+              I am Software Engineer with a background in design, and I just
+              can't seem to get over building stuff.
             </div>
 
             <div className="flex space-x-10 ">
               <a
                 target="_blank"
                 href="https://github.com/fiizzy"
-                className="flex items-center space-x-2 opacity-50 hover:opacity-100"
+                className="flex items-center space-x-2 opacity-70 hover:opacity-50"
               >
                 <Image src={github} height={40} />
                 <div>GitHub</div>
@@ -39,7 +40,7 @@ export const Intro = () => {
               <a
                 target="_blank"
                 href="https://linkedin.com/in/fisayo-obilaja"
-                className="flex items-center space-x-2 opacity-50 hover:opacity-100"
+                className="flex items-center space-x-2 opacity-70 hover:opacity-50"
               >
                 <Image src={linkedin} height={40} />
                 <div>LinkedIn</div>
@@ -54,7 +55,7 @@ export const Intro = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center space-x-2 opacity-50 hover:opacity-100"
+                  className="flex items-center space-x-2 opacity-70 hover:opacity-50"
                 >
                   <div className="underline"> Resume</div>
                 </a>

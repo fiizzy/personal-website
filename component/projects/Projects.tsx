@@ -73,13 +73,13 @@ export const Projects = () => {
             </div>
             {e.isFlagship ? (
               <div>
-                <div className="mt-8 text-7 font-bold">Flagship story</div>
+                <div className="mt-8 text-7 font-bold">My Flagship Project</div>
                 <div className="mt-2 text-4 ">
-                  If you’re looking to access my latest skillset and experience,
-                  please check out this project as it contains all of my most
-                  recent experience that takes in account OOP principles,
-                  Testing, Clean Architecture, Reactive Programming and Design
-                  patterns.
+                  If you’re looking to access my latest skill-sets and
+                  experience, please check out this project as it contains all
+                  of my most recent experience that takes in account OOP
+                  principles, Testing, Clean Architecture, Reactive Programming
+                  and Design patterns.
                 </div>
               </div>
             ) : (

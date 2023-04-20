@@ -6,6 +6,11 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        light: ["Aeonik-Light"],
+        regular: ["Aeonik-Regular"],
+        bold: ["Aeonik-Bold"],
+      },
       fontWeight: {
         light: 200,
         regular: 500,

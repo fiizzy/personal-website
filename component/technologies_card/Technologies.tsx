@@ -13,7 +13,9 @@ export const Technologies = ({ title, group }: any) => {
     >
       <Bordercard>
         <div>
-          <div className="text-8 opacity-60 font-bold underline">{title}</div>
+          <div className="text-6 md:text-8 opacity-60 font-bold underline">
+            {title}
+          </div>
           {group.map((e: any, i: any) => (
             <div key={i}>
               <div className="mt-10 mb-2 uppercase tracking-widest opacity-70">

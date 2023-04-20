@@ -24,7 +24,7 @@ export const Navbar = (props: any) => {
             className="flex items-center space-x-2"
           >
             <Image src={github} height={40} />
-            <div>GitHub</div>
+            <div className="md:block hidden">GitHub</div>
           </a>
           <a
             target="_blank"
@@ -32,7 +32,7 @@ export const Navbar = (props: any) => {
             className="flex items-center space-x-2"
           >
             <Image src={linkedin} height={40} />
-            <div>LinkedIn</div>
+            <div className="md:block hidden">LinkedIn</div>
           </a>
           <Link
             download

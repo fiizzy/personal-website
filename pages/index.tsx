@@ -37,7 +37,9 @@ const Home: any = () => {
         <Office />
         <Books />
       </BoxPadding>
-      <Navbar />
+      <div className="my-20">
+        <Navbar />
+      </div>
     </>
   );
 };
