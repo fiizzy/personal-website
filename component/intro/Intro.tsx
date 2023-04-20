@@ -24,7 +24,7 @@ export const Intro = () => {
               Hi, I am Fisayo
             </div>
             <div className="text-6 md:text-8 font-light">
-              I am Software Engineer with a background in design, and I just
+              I am a Software Engineer with a background in design, and I just
               can't seem to get over building stuff.
             </div>
 
