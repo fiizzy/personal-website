@@ -24,8 +24,15 @@ export const Intro = () => {
               Hi, I am Fisayo
             </div>
             <div className="text-6 md:text-8 font-light">
-              I am a Software Engineer with a background in design, and I just
-              can't seem to get over building stuff.
+              I am a Software Engineer with a{" "}
+              <a
+                href="https://behance.net/fisayoobilaja"
+                target="_blank"
+                className="text-blue-200"
+              >
+                <u> background in design</u>
+              </a>
+              , and I just can't seem to get over building stuff.
             </div>
 
             <div className="flex space-x-10 ">
