@@ -25,9 +25,17 @@ export const Projects = () => {
                 : "bg-gradient-to-r from-darkGradient-1 to-darkGradient-2"
             } `}
           >
-            <div className="flex md:space-x-20 flex-wrap md:flex-nowrap items-center">
+            <div
+              className={`${
+                e.isFlagship ? "block" : "flex md:space-x-20"
+              }  flex-wrap md:flex-nowrap items-center`}
+            >
               <div>
-                <div className="w-[200px]">
+                <div
+                  className={`${
+                    e.isFlagship ? "" : "w-[200px]"
+                  } md:space-x-20 flex-wrap md:flex-nowrap items-center`}
+                >
                   <img
                     src={e.image}
                     alt={e.name}

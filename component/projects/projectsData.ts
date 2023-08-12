@@ -1,10 +1,19 @@
 export const projectData = [
   {
+    name: "Calentre",
+    description:
+      "Calentre is an open-source alternative to Calendly! 🌟  It allows you manage your appointments, get paid, and enjoy the scheduling experience.",
+    image: "../../home_events.png",
+    isFlagship: true,
+    // github: "https://github.com/fiizzy",
+    github: "https://github.com/fiizzy/calentre",
+  },
+  {
     name: "MyBubble",
     description:
       "A mental health mobile app that allows users track their moods and receive support from family and friends",
     image: "../../mybbuble.png",
-    isFlagship: true,
+    isFlagship: false,
     // github: "https://github.com/fiizzy",
     ios: "https://apps.apple.com/gb/app/mybubble-mood-tracker-journal/id1591195254",
     android:
