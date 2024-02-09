@@ -6,7 +6,7 @@ export const projectData = [
     image: "../../home_events.png",
     isFlagship: true,
     // github: "https://github.com/fiizzy",
-    github: "https://github.com/fiizzy/calentre",
+    github: "https://github.com/Calentre",
   },
   {
     name: "MyBubble",
