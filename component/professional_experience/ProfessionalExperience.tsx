@@ -7,12 +7,13 @@ export const ProfessionalExperience = () => {
         PROFESSIONAL SUMMARY
       </h3>
       <p className="line-height-2 text-5">
-        I am a software engineer with 3 years of experience building quality,
-        testable and maintainable software products. I have a Bachelor's degree
-        in computer engineering with an additional background in design and
-        product health in general. In my day to day job, I work with Flutter
-        mostly. I occassionally work with React, Node and TypeScript. My
-        technological goal is to become a CTpO (with a small p!) -
+        I am a software engineer with years of experience building quality,
+        testable and maintainable software products. Within my professional
+        routine, I immerse myself extensively in React Native, and Flutter,
+        specializing in the intricacies of mobile application development. My
+        technical repertoire extends to include React, Node.js, and AWS,
+        showcasing my adeptness in handling intricate cloud dependent projects.
+        My technological goal is to become a CTpO (with a small p!) -
         <a
           target="_blank"
           href="https://medium.com/@rico.surridge/cpo-cto-or-cpto-3ae202c021cf"

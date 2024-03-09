@@ -1,7 +1,7 @@
 export const Tools = {
   group: [
     {
-      type: "serverless",
+      type: "server(less)",
       data: [
         {
           name: "Firebase",
@@ -12,6 +12,11 @@ export const Tools = {
           name: "Supabase",
           image: "/supabase.svg",
           url: "https://supabase.com",
+        },
+        {
+          name: "AWS",
+          image: "/aws.png",
+          url: "https://aws.com",
         },
       ],
     },
@@ -32,6 +37,16 @@ export const Tools = {
           name: "Vercel Workflow",
           image: "/vercel.svg",
           url: "https://vercel.com/workflow",
+        },
+        {
+          name: "Circle CI",
+          image: "/circleci.png",
+          url: "https://circleci.com/",
+        },
+        {
+          name: "Jenkins",
+          image: "/jenkins.jpeg",
+          url: "https://jenkins.io",
         },
       ],
     },
