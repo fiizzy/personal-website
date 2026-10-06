@@ -8,11 +8,13 @@ import { Recognition } from "../component/recognition/Recognition";
 import { Office } from "../component/office/Office";
 import { Books } from "../component/books/Books";
 import { NextHead } from "../component/Head/NextHead";
+import { HeroBackground } from "../component/intro/HeroBackground";
 
 const Home: any = () => {
   return (
-    <div id="top">
+    <div id="top" className="relative isolate">
       <NextHead pageTitle="Fisayo Obilaja" />
+      <HeroBackground />
       <Navbar />
       <main id="main">
         <BoxPadding>
