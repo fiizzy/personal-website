@@ -11,13 +11,6 @@ export interface IProject {
 
 export const projectData: IProject[] = [
   {
-    name: "Calentre",
-    description:
-      "An open-source alternative to Calendly. Manage your appointments, get paid, and enjoy the scheduling experience.",
-    image: "/home_events.png",
-    github: "https://github.com/Calentre",
-  },
-  {
     name: "WithEase",
     description:
       "Route-aware scheduling for mobile clinicians. WithEase helps healthcare professionals who travel between patient locations plan their visits and optimize their routes.",
@@ -37,6 +30,14 @@ export const projectData: IProject[] = [
       "An AI-powered auditory training platform that helps people with hearing loss understand speech better by training the brain. I build it at Neurotone AI, across the React Native app, the web app and the Supabase backend.",
     image: "/lace.png",
     website: "https://neurotone.com",
+  },
+  {
+    name: "Calentre",
+    description:
+      "An open-source alternative to Calendly. Manage your appointments, get paid, and enjoy the scheduling experience.",
+    image: "/home_events.png",
+    website: "https://calentre.com",
+    github: "https://github.com/Calentre",
   },
   {
     name: "MyBubble",
