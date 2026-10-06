@@ -2,10 +2,10 @@ import Head from "next/head";
 import { INextHead } from "./INextHead";
 
 const description =
-  "Fisayo is a Software Engineer that just can't get over the beauty of building products...";
+  "Fisayo Obilaja is a full-stack software engineer in Manchester, UK, building mobile, web and backend products, increasingly with AI at their core.";
 
 export const NextHead = (props: INextHead) => {
-  const title = `${props.pageTitle} | Software Engineer`;
+  const title = `${props.pageTitle} | Full-stack Software Engineer`;
   return (
     <Head>
       <title>{title}</title>

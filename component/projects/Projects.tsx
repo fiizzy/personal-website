@@ -9,7 +9,7 @@ import playstore from "../../public/playstore.png";
 export const Projects = () => {
   return (
     <Section id="projects" title="Projects">
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
         {projectData.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}

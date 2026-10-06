@@ -2,6 +2,9 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +13,6 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.0",
-    "framer-motion": "^10.12.4",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"

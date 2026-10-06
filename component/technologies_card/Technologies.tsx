@@ -9,7 +9,7 @@ export const Technologies = () => {
         {stack.map((group) => (
           <div
             key={group.type}
-            className="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:items-center md:gap-8 md:py-7"
+            className="grid gap-3 py-6 md:grid-cols-[180px_minmax(0,1fr)] md:items-center md:gap-8 md:py-7"
           >
             <dt className="text-2 uppercase tracking-[0.16em] text-fg/65">
               {group.type}
