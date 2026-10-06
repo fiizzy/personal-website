@@ -1,31 +1,32 @@
 import Image from "next/image";
 import officeOne from "../../public/office-1.png";
-import officeThree from "../../public/office-3.png";
 import officeTwo from "../../public/office-2.png";
-import { motion } from "framer-motion";
+import { Section } from "../section/Section";
+
+const photos = [
+  { src: officeOne, alt: "Fisayo's desk setup" },
+  { src: officeTwo, alt: "Another view of Fisayo's workspace" },
+];
 
 export const Office = () => {
   return (
-    <>
-      <motion.div
-        initial={{ y: +100, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        // viewport={{ once: true }}
-      >
-        <p className="mb-10 tracking-widest text-8 opacity-70 font-light uppercase">
-          office
-        </p>
-        <div className="flex items-center justify-between ">
-          <div className=" flex-1 ">
-            <Image src={officeOne} />
+    <Section id="office" title="office">
+      <div className="grid gap-4 sm:grid-cols-2">
+        {photos.map((photo) => (
+          <div
+            key={photo.alt}
+            className="relative aspect-[16/9] overflow-hidden rounded-2xl ring-1 ring-fg/10"
+          >
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+            />
           </div>
-
-          <div className="flex-1 ">
-            <Image src={officeTwo} />
-          </div>
-        </div>
-      </motion.div>
-    </>
+        ))}
+      </div>
+    </Section>
   );
 };

@@ -6,15 +6,18 @@ module.exports = {
 
   theme: {
     extend: {
+      // Aeonik ships as one family: Light 300, Regular 400, Bold 700
       fontFamily: {
-        light: ["Aeonik-Light"],
-        regular: ["Aeonik-Regular"],
-        bold: ["Aeonik-Bold"],
-      },
-      fontWeight: {
-        light: 200,
-        regular: 500,
-        bold: 800,
+        sans: [
+          "Aeonik",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "sans-serif",
+        ],
       },
       //Using the Major-Second type scale - ref : https://typescale.com
       fontSize: {
@@ -34,6 +37,10 @@ module.exports = {
         14: "3.247rem",
       },
       colors: {
+        // Theme tokens, defined per theme in styles/globals.css
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
         white: colors.white,
         black: colors.black,
         gradientPurple: {

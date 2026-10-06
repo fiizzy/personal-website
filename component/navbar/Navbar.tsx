@@ -1,56 +1,56 @@
 import Image from "next/image";
 import { Padding } from "../Padding";
-/* 
-Image imports
-*/
-import logoBeta from "../../public/logo.svg";
-import github from "../../public/github.svg";
-import linkedin from "../../public/linkedin.svg";
-import Link from "next/link";
+import { socialLinks } from "../socialLinks";
+import { ThemeToggle } from "./ThemeToggle";
+import logo from "../../public/logo.svg";
 
-export const Navbar = (props: any) => {
+interface INavbar {
+  as?: "header" | "footer";
+}
+
+export const Navbar = ({ as: Tag = "header" }: INavbar) => {
   return (
-    <Padding>
-      <div
-        className={`${
-          props.display ?? "flex"
-        }  justify-between items-center p-6 ${props.color ?? "bg-grey-900"}`}
-      >
-        <Image src={logoBeta} height={40} />
-        <div className="flex space-x-10">
+    <Tag>
+      <Padding>
+        <div
+          className={`flex items-center justify-between py-6 ${
+            Tag === "footer" ? "border-t border-fg/10" : "border-b border-fg/10"
+          }`}
+        >
           <a
-            target="_blank"
-            href="https://github.com/fiizzy"
-            className="flex items-center space-x-2"
+            href="#top"
+            aria-label="Fisayo Obilaja, back to top"
+            className="flex rounded-md transition-opacity hover:opacity-80"
           >
-            <Image src={github} height={40} />
-            <div className="md:block hidden">GitHub</div>
+            <span className="mono-icon flex">
+              <Image src={logo} alt="" height={40} width={40} />
+            </span>
           </a>
-          <a
-            target="_blank"
-            href="https://linkedin.com/in/fisayo-obilaja"
-            className="flex items-center space-x-2"
-          >
-            <Image src={linkedin} height={40} />
-            <div className="md:block hidden">LinkedIn</div>
-          </a>
-          <Link
-            download
-            href="/resume.pdf"
-            locale={false}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center space-x-2"
-            >
-              <div className="underline"> Resume</div>
-            </a>
-          </Link>
+          <div className="flex items-center gap-1 md:gap-3">
+            <nav aria-label={Tag === "footer" ? "Footer" : "Main"}>
+              <ul className="flex items-center gap-2 md:gap-4">
+                {socialLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={link.href}
+                      aria-label={link.name}
+                      className="group flex items-center gap-2 rounded-lg px-2 py-2 text-fg/75 transition-colors hover:text-fg"
+                    >
+                      <span className="mono-icon flex opacity-75 transition-opacity group-hover:opacity-100">
+                        <Image src={link.icon} alt="" height={28} width={28} />
+                      </span>
+                      <span className="hidden md:inline">{link.name}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            {Tag === "header" ? <ThemeToggle /> : null}
+          </div>
         </div>
-      </div>
-    </Padding>
+      </Padding>
+    </Tag>
   );
 };

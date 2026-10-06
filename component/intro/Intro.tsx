@@ -1,76 +1,59 @@
 import Image from "next/image";
 import profilePicture from "../../public/profile-picture.png";
-
-import logoBeta from "../../public/logo.svg";
-import github from "../../public/github.svg";
-import linkedin from "../../public/linkedin.svg";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { socialLinks } from "../socialLinks";
 
 export const Intro = () => {
   return (
-    <>
-      <motion.div
-        initial={{ y: +100, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        // viewport={{ once: true }}
-      >
-        <div className="md:flex items-center mt-40 md:space-x-10">
-          <Image src={profilePicture} width={200} height={200} />
+    <section className="pt-16 md:pt-32">
+      <div className="flex flex-col gap-8 md:flex-row md:items-center md:gap-12">
+        <div className="rise w-[160px] shrink-0 overflow-hidden rounded-2xl ring-1 ring-fg/10 shadow-[0_24px_60px_-24px_rgba(124,62,255,0.55)] md:w-[200px]">
+          <Image
+            src={profilePicture}
+            alt="Portrait of Fisayo Obilaja"
+            layout="responsive"
+            width={200}
+            height={200}
+            placeholder="blur"
+            priority
+          />
+        </div>
 
-          <div>
-            <div className="text-12 font-bold gradient-text">
-              Hi, I am Fisayo
-            </div>
-            <div className="text-6 md:text-8 font-light">
-              I am a Software Engineer with a{" "}
-              <a
-                href="https://behance.net/fisayoobilaja"
-                target="_blank"
-                className="text-blue-200"
-              >
-                <u> background in design</u>
-              </a>
-              , and I just can't seem to get over building stuff.
-            </div>
+        <div>
+          <h1 className="rise [animation-delay:80ms] text-11 md:text-14 font-bold leading-[1.1] tracking-[-0.02em] gradient-text">
+            Hi, I am Fisayo
+          </h1>
+          <p className="rise [animation-delay:160ms] mt-4 max-w-[36ch] text-6 md:text-8 font-light leading-snug text-fg/90">
+            I am a Software Engineer with a{" "}
+            <a
+              href="https://behance.net/fisayoobilaja"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              background in design
+            </a>
+            , and I just can't seem to get over building stuff.
+          </p>
 
-            <div className="flex space-x-10 ">
-              <a
-                target="_blank"
-                href="https://github.com/fiizzy"
-                className="flex items-center space-x-2 opacity-70 hover:opacity-50"
-              >
-                <Image src={github} height={40} />
-                <div>GitHub</div>
-              </a>
-              <a
-                target="_blank"
-                href="https://linkedin.com/in/fisayo-obilaja"
-                className="flex items-center space-x-2 opacity-70 hover:opacity-50"
-              >
-                <Image src={linkedin} height={40} />
-                <div>LinkedIn</div>
-              </a>
-              <Link
-                download
-                href="/resume.pdf"
-                locale={false}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
+          <ul className="rise [animation-delay:240ms] mt-8 flex flex-wrap gap-3">
+            {socialLinks.map((link) => (
+              <li key={link.name}>
                 <a
                   target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center space-x-2 opacity-70 hover:opacity-50"
+                  rel="noopener noreferrer"
+                  href={link.href}
+                  className="inline-flex h-11 items-center gap-2 rounded-xl border border-fg/15 bg-fg/[0.03] pl-3 pr-4 text-fg/85 transition-colors hover:border-fg/30 hover:bg-fg/[0.08] hover:text-fg"
                 >
-                  <div className="underline"> Resume</div>
+                  <span className="mono-icon flex">
+                    <Image src={link.icon} alt="" height={22} width={22} />
+                  </span>
+                  {link.name}
                 </a>
-              </Link>
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
         </div>
-      </motion.div>
-    </>
+      </div>
+    </section>
   );
 };

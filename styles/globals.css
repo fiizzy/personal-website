@@ -3,51 +3,208 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Aeonik-Light";
-  font-weight: 100;
+  font-family: "Aeonik";
+  font-weight: 300;
+  font-display: swap;
   src: url("../fonts/Aeonik-Light.woff") format("woff");
 }
 @font-face {
-  font-family: "Aeonik-Regular";
-  font-weight: 500;
+  font-family: "Aeonik";
+  font-weight: 400;
+  font-display: swap;
   src: url("../fonts/Aeonik-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: "Aeonik-Bold";
-  font-weight: 800;
+  font-family: "Aeonik";
+  font-weight: 700;
+  font-display: swap;
   src: url("../fonts/Aeonik-Bold.woff") format("woff");
 }
 
-html,
-* {
-  font-family: "Aeonik-Light";
-}
-body {
-  padding: 0;
-  margin: 0;
-  color: white;
-  font-family: , BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #0d0d0d;
-  scroll-behavior: smooth;
+/* Theme tokens. Dark is the default; light applies from the OS
+   preference or an explicit data-theme set by the theme toggle. */
+:root {
+  color-scheme: dark;
+  --bg: 13 13 13;
+  --fg: 255 255 255;
+  --surface: 17 17 17;
+  --card-from: #250028;
+  --card-to: #1b0036;
+  --well: rgb(0 0 0 / 0.25);
+  --link: #699bff;
+  --link-hover: #a3c2ff;
+  --focus: #e3b5ff;
+  --selection: rgb(124 62 255 / 0.5);
+  --scrollbar: #2e2e2e;
+  --scrollbar-hover: #434343;
+  --gradient-from: #7c3eff;
+  --gradient-to: #e3b5ff;
+  --mono-icon-filter: none;
 }
 
-h1,
-h3 {
-  font-family: BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: 250 249 252;
+    --fg: 20 16 28;
+    --surface: 255 255 255;
+    --card-from: #f8f4ff;
+    --card-to: #efe7ff;
+    --well: rgb(124 62 255 / 0.06);
+    --link: #1f55d6;
+    --link-hover: #123c9e;
+    --focus: #7c3eff;
+    --selection: rgb(124 62 255 / 0.22);
+    --scrollbar: #cfcbd6;
+    --scrollbar-hover: #aaa5b4;
+    --gradient-from: #6a2bf0;
+    --gradient-to: #b14be8;
+    --mono-icon-filter: invert(1);
+  }
 }
-a {
-  color: inherit;
-  text-decoration: none;
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: 250 249 252;
+  --fg: 20 16 28;
+  --surface: 255 255 255;
+  --card-from: #f8f4ff;
+  --card-to: #efe7ff;
+  --well: rgb(124 62 255 / 0.06);
+  --link: #1f55d6;
+  --link-hover: #123c9e;
+  --focus: #7c3eff;
+  --selection: rgb(124 62 255 / 0.22);
+  --scrollbar: #cfcbd6;
+  --scrollbar-hover: #aaa5b4;
+  --gradient-from: #6a2bf0;
+  --gradient-to: #b14be8;
+  --mono-icon-filter: invert(1);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--scrollbar) rgb(var(--bg));
+  scrollbar-width: thin;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(var(--fg));
+  background-color: rgb(var(--bg));
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg));
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  border: 2px solid rgb(var(--bg));
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
 .gradient-text {
-  background: linear-gradient(to right, #7c3eff, #e3b5ff);
+  background: linear-gradient(to right, var(--gradient-from), var(--gradient-to));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.link {
+  color: var(--link);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: color-mix(in srgb, var(--link) 45%, transparent);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.link:hover {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+}
+
+/* White-only icons and the logo flip to black in light mode */
+.mono-icon {
+  filter: var(--mono-icon-filter);
+}
+
+.project-card {
+  background: linear-gradient(135deg, var(--card-from), var(--card-to));
+}
+.project-media {
+  background: var(--well);
+}
+
+/* The toggle shows the theme you would switch to */
+.theme-icon-sun {
+  display: none;
+}
+:root[data-theme="dark"] .theme-icon-sun {
+  display: block;
+}
+:root[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+:root[data-theme="light"] .theme-icon-moon {
+  display: block;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.rise {
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    transition: none;
+  }
+  .rise {
+    animation: none;
+  }
 }

@@ -1,50 +1,47 @@
-import { Bordercard } from "../border_card/BoderCard";
-import github from "../../public/github.svg";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { Section } from "../section/Section";
+import { ITechnology, stack } from "./stack";
 
-export const Technologies = ({ title, group }: any) => {
+export const Technologies = () => {
   return (
-    <motion.div
-      initial={{ y: +100, opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true }}
-    >
-      <Bordercard>
-        <div>
-          <div className="text-6 md:text-8 opacity-60 font-bold underline">
-            {title}
-          </div>
-          {group.map((e: any, i: any) => (
-            <div key={i}>
-              <div className="mt-10 mb-2 uppercase tracking-widest opacity-70">
-                {e.type}
-              </div>
-              <div className="flex  flex-wrap mt-2">
-                {e.data.map((e: any, i: any) => (
-                  <div key={i}>
-                    <Tags e={e} />
-                  </div>
+    <Section id="stack" title="Stack">
+      <dl className="divide-y divide-fg/10 rounded-2xl border border-fg/10 bg-surface px-6 md:px-10">
+        {stack.map((group) => (
+          <div
+            key={group.type}
+            className="grid gap-3 py-6 md:grid-cols-[220px_1fr] md:items-center md:gap-8 md:py-7"
+          >
+            <dt className="text-2 uppercase tracking-[0.16em] text-fg/65">
+              {group.type}
+            </dt>
+            <dd className="m-0">
+              <ul className="flex flex-wrap gap-2">
+                {group.data.map((tech) => (
+                  <li key={tech.name}>
+                    <Tag tech={tech} />
+                  </li>
                 ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </Bordercard>
-    </motion.div>
+              </ul>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </Section>
   );
 };
 
-const Tags = ({ e }: any) => {
+const Tag = ({ tech }: { tech: ITechnology }) => {
   return (
-    <a target="_blank" href={e.url}>
-      <div className="grey-200 bg-grey-100 p-2 rounded-[10px] border border-grey-200 cursor-pointer hover:opacity-50 mt-2 mr-2">
-        <div className="flex items-center space-x-2">
-          <Image src={e.image} height={20} width={20} />
-          <div>{e.name}</div>
-        </div>
-      </div>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={tech.url}
+      className="inline-flex items-center gap-2 rounded-lg border border-fg/10 bg-fg/[0.03] px-3 py-2 text-3 md:text-4 text-fg/85 transition-colors hover:border-fg/25 hover:bg-fg/[0.07] hover:text-fg"
+    >
+      <span className={`flex ${tech.mono ? "mono-icon" : ""}`}>
+        <Image src={tech.image} alt="" height={18} width={18} />
+      </span>
+      {tech.name}
     </a>
   );
 };
