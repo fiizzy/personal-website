@@ -2,42 +2,48 @@ import Image from "next/image";
 import profilePicture from "../../public/profile-picture.png";
 import Link from "next/link";
 import { socialLinks } from "../socialLinks";
+import { GlareHover } from "../reactbits/GlareHover";
+import { BlurWords } from "../blur_words/BlurWords";
 
 export const Intro = () => {
   return (
     <section className="grid gap-8 pt-16 md:grid-cols-[180px_minmax(0,1fr)] md:items-center md:gap-10 md:pt-28 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-12">
       <div className="rise w-[160px] overflow-hidden rounded-2xl ring-1 ring-fg/10 shadow-[0_24px_60px_-24px_rgba(124,62,255,0.55)] md:w-full">
-        <Image
-          src={profilePicture}
-          alt="Portrait of Fisayo Obilaja"
-          layout="responsive"
-          width={220}
-          height={220}
-          placeholder="blur"
-          priority
-        />
+        <GlareHover>
+          <Image
+            src={profilePicture}
+            alt="Portrait of Fisayo Obilaja"
+            layout="responsive"
+            width={220}
+            height={220}
+            placeholder="blur"
+            priority
+          />
+        </GlareHover>
       </div>
 
       <div>
         <h1 className="rise [animation-delay:80ms] text-11 md:text-14 font-bold leading-[1.1] tracking-[-0.02em] gradient-text">
           Hi, I am Fisayo
         </h1>
-        <p className="rise [animation-delay:160ms] mt-4 text-6 md:text-8 font-light leading-snug text-fg/90">
-          A full-stack software engineer in Manchester, UK. I build mobile, web
-          and backend products end to end, increasingly with AI at their core. I
-          have a{" "}
-          <a
-            href="https://behance.net/fisayoobilaja"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link"
-          >
-            background in design
-          </a>
-          , and I just can't seem to get over building stuff.
+        <p className="mt-4 text-6 md:text-8 font-light leading-snug text-fg/90">
+          <BlurWords delay={180}>
+            A full-stack software engineer in Manchester, UK. I build mobile,
+            web and backend products end to end, increasingly with AI at their
+            core. I have a{" "}
+            <a
+              href="https://behance.net/fisayoobilaja"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link"
+            >
+              background in design
+            </a>
+            , and I just can't seem to get over building stuff.
+          </BlurWords>
         </p>
 
-        <ul className="rise [animation-delay:240ms] mt-8 flex flex-wrap gap-3">
+        <ul className="rise [animation-delay:700ms] mt-8 flex flex-wrap gap-3">
           <li className="w-full sm:w-auto">
             <Link href="/experience">
               <a className="group inline-flex h-11 w-full items-center justify-center gap-2 sm:w-auto rounded-xl bg-fg px-5 font-normal text-bg transition-[background-color,transform] duration-200 hover:bg-fg/85 active:scale-[0.98]">

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "../button/Button";
 import { Section } from "../section/Section";
+import { SpotlightCard } from "../reactbits/SpotlightCard";
 import { IProject, projectData } from "./projectsData";
 
 import appstore from "../../public/appstore.png";
@@ -64,16 +65,19 @@ export const Projects = () => {
 
 const ProjectCard = ({ project }: { project: IProject }) => {
   return (
-    <article className="project-card flex flex-col overflow-hidden rounded-2xl border border-fg/10">
-      <div className="project-media flex h-72 items-center justify-center p-6 md:h-80">
+    <SpotlightCard
+      as="article"
+      className="project-card group flex flex-col rounded-2xl border border-fg/10 transition-colors duration-300 hover:border-fg/20"
+    >
+      <div className="project-media relative flex h-72 items-center justify-center p-6 md:h-80">
         <img
           src={project.image}
           alt={`${project.name} screenshot`}
           loading="lazy"
-          className="h-auto max-h-full w-auto max-w-full rounded-xl object-contain"
+          className="h-auto max-h-full w-auto max-w-full rounded-xl object-contain transition-transform duration-500 ease-out motion-safe:group-hover:-translate-y-1.5 motion-safe:group-hover:scale-[1.03]"
         />
       </div>
-      <div className="flex flex-1 flex-col p-6 md:p-8">
+      <div className="relative flex flex-1 flex-col p-6 md:p-8">
         <h3 className="text-7 font-bold">{project.name}</h3>
         <p className="mt-3 max-w-[60ch] text-4 leading-relaxed text-fg/80">
           {project.description}
@@ -110,6 +114,6 @@ const ProjectCard = ({ project }: { project: IProject }) => {
           )}
         </div>
       </div>
-    </article>
+    </SpotlightCard>
   );
 };

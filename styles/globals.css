@@ -40,6 +40,7 @@
   --gradient-from: #7c3eff;
   --gradient-to: #e3b5ff;
   --mono-icon-filter: none;
+  --spotlight: rgb(168 120 255 / 0.32);
 }
 
 @media (prefers-color-scheme: light) {
@@ -59,6 +60,7 @@
     --scrollbar-hover: #aaa5b4;
     --gradient-from: #6a2bf0;
     --gradient-to: #b14be8;
+    --spotlight: rgb(124 62 255 / 0.16);
     --mono-icon-filter: invert(1);
   }
 }
@@ -80,6 +82,7 @@
   --gradient-from: #6a2bf0;
   --gradient-to: #b14be8;
   --mono-icon-filter: invert(1);
+  --spotlight: rgb(124 62 255 / 0.16);
 }
 
 html {
@@ -181,6 +184,38 @@ a {
   display: block;
 }
 
+/* Project card spotlight (see component/reactbits/SpotlightCard.tsx) */
+.spotlight-card__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--spot-opacity, 0);
+  transition: opacity 0.5s ease;
+  background: radial-gradient(
+    520px circle at var(--spot-x, 50%) var(--spot-y, 30%),
+    var(--spotlight),
+    transparent 70%
+  );
+}
+
+/* Hero intro words sharpen in one after another */
+@keyframes blur-in {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(0.3em);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
+.blur-word {
+  display: inline-block;
+  animation: blur-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -206,5 +241,11 @@ a {
   }
   .rise {
     animation: none;
+  }
+  .blur-word {
+    animation: none;
+  }
+  .spotlight-card__glow {
+    transition: none;
   }
 }
