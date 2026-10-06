@@ -1,13 +1,11 @@
 import Image from "next/image";
 import profilePicture from "../../public/profile-picture.png";
-import { sectionColumns } from "../section/Section";
+import Link from "next/link";
 import { socialLinks } from "../socialLinks";
 
 export const Intro = () => {
   return (
-    <section
-      className={`grid gap-8 pt-16 md:grid-cols-[180px_minmax(0,1fr)] md:items-center md:gap-10 md:pt-28 ${sectionColumns}`}
-    >
+    <section className="grid gap-8 pt-16 md:grid-cols-[180px_minmax(0,1fr)] md:items-center md:gap-10 md:pt-28 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-12">
       <div className="rise w-[160px] overflow-hidden rounded-2xl ring-1 ring-fg/10 shadow-[0_24px_60px_-24px_rgba(124,62,255,0.55)] md:w-full">
         <Image
           src={profilePicture}
@@ -26,8 +24,8 @@ export const Intro = () => {
         </h1>
         <p className="rise [animation-delay:160ms] mt-4 text-6 md:text-8 font-light leading-snug text-fg/90">
           A full-stack software engineer in Manchester, UK. I build mobile, web
-          and backend products end to end, increasingly with AI at their core.
-          I have a{" "}
+          and backend products end to end, increasingly with AI at their core. I
+          have a{" "}
           <a
             href="https://behance.net/fisayoobilaja"
             target="_blank"
@@ -40,6 +38,27 @@ export const Intro = () => {
         </p>
 
         <ul className="rise [animation-delay:240ms] mt-8 flex flex-wrap gap-3">
+          <li className="w-full sm:w-auto">
+            <Link href="/experience">
+              <a className="group inline-flex h-11 w-full items-center justify-center gap-2 sm:w-auto rounded-xl bg-fg px-5 font-normal text-bg transition-[background-color,transform] duration-200 hover:bg-fg/85 active:scale-[0.98]">
+                View experience
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                >
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </Link>
+          </li>
           {socialLinks.map((link) => (
             <li key={link.name}>
               <a

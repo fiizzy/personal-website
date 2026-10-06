@@ -16,6 +16,14 @@ export const Navbar = ({ as: Tag = "header" }: INavbar) => {
 
   return (
     <Tag>
+      {Tag === "header" ? (
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-fg focus:px-4 focus:py-3 focus:text-bg"
+        >
+          Skip to content
+        </a>
+      ) : null}
       <Padding>
         <div
           className={`flex items-center justify-between py-6 ${

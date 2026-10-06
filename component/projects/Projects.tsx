@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import { Button } from "../button/Button";
 import { Section } from "../section/Section";
 import { IProject, projectData } from "./projectsData";
@@ -6,14 +7,57 @@ import { IProject, projectData } from "./projectsData";
 import appstore from "../../public/appstore.png";
 import playstore from "../../public/playstore.png";
 
+// Enough to show range without burying the rest of the page
+const INITIAL_COUNT = 6;
+
 export const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? projectData : projectData.slice(0, INITIAL_COUNT);
+  const hiddenCount = projectData.length - INITIAL_COUNT;
+
+  const toggle = () => {
+    if (showAll) {
+      document.getElementById("projects")?.scrollIntoView({ block: "start" });
+    }
+    setShowAll(!showAll);
+  };
+
   return (
     <Section id="projects" title="Projects">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-        {projectData.map((project) => (
+      <div id="project-grid" className="grid gap-6 md:grid-cols-2">
+        {visible.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
       </div>
+      {hiddenCount > 0 && (
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={toggle}
+            aria-expanded={showAll}
+            aria-controls="project-grid"
+            className="group inline-flex h-12 items-center gap-2 rounded-xl border border-fg/15 bg-fg/[0.03] px-6 font-normal text-fg/90 transition-colors hover:border-fg/30 hover:bg-fg/[0.08] hover:text-fg"
+          >
+            {showAll
+              ? "Show fewer projects"
+              : `Show all ${projectData.length} projects`}
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              className={`h-3.5 w-3.5 transition-transform duration-200 ${showAll ? "rotate-180" : ""}`}
+            >
+              <path
+                d="M4 6l4 4 4-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      )}
     </Section>
   );
 };

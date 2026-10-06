@@ -3,17 +3,16 @@ import { BoxPadding } from "../component/BoxPadding";
 import { Navbar } from "../component/navbar/Navbar";
 import { NextHead } from "../component/Head/NextHead";
 import { ExperienceList } from "../component/experience/Experience";
-import { sectionColumns } from "../component/section/Section";
 
 const ExperiencePage: any = () => {
   return (
     <div id="top">
       <NextHead pageTitle="Experience · Fisayo Obilaja" />
       <Navbar />
-      <main>
+      <main id="main">
         <BoxPadding>
-          <div className={`grid gap-8 pt-16 md:pt-24 ${sectionColumns}`}>
-            <div className="lg:pt-3">
+          <div className="pt-12 md:pt-20">
+            <div>
               <Link href="/">
                 <a className="group inline-flex items-center gap-2 rounded-lg text-4 text-fg/70 transition-colors hover:text-fg">
                   <svg
@@ -34,7 +33,7 @@ const ExperiencePage: any = () => {
                 </a>
               </Link>
             </div>
-            <div className="min-w-0">
+            <div className="mt-10 md:mt-14">
               <h1 className="text-11 md:text-14 font-bold leading-[1.1] tracking-[-0.02em]">
                 Experience
               </h1>

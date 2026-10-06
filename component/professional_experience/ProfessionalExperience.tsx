@@ -9,8 +9,8 @@ export const ProfessionalExperience = () => {
           Since 2018 I've grown from product designer to full-stack engineer,
           shipping React Native and Flutter apps, React and Next.js on the web,
           and the Supabase, PostgreSQL and AWS backends behind them. Today I
-          build AI-powered hearing health products at Neurotone AI. My
-          long-term goal is to become a CTpO (with a small p!) -{" "}
+          build AI-powered hearing health products at Neurotone AI. My long-term
+          goal is to become a CTpO (with a small p!) -{" "}
           <a
             target="_blank"
             rel="noopener noreferrer"

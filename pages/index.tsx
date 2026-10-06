@@ -14,11 +14,11 @@ const Home: any = () => {
     <div id="top">
       <NextHead pageTitle="Fisayo Obilaja" />
       <Navbar />
-      <main>
+      <main id="main">
         <BoxPadding>
           <Intro />
-          <Projects />
           <ProfessionalExperience />
+          <Projects />
           <Technologies />
           <Recognition />
           <Office />

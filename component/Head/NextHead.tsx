@@ -12,7 +12,10 @@ export const NextHead = (props: INextHead) => {
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={props.previewImage ?? "/og_image.png"} />
+      <meta
+        property="og:image"
+        content={props.previewImage ?? "/og_image.png"}
+      />
 
       <link rel="icon" href="/favicon.ico" />
     </Head>
